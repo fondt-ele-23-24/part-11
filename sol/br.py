@@ -11,7 +11,8 @@ class BuckinghamReiner:
 
     
 def find_sol(Re, He):
+    a, b = 0.001, 0.004
     f = BuckinghamReiner(Re=Re, He=He)
-    x_sol = brentq(f, a=0.001, b=0.004)
+    x_sol = brentq(f, a, b)
     return x_sol
     
